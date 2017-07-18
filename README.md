@@ -9,16 +9,23 @@ Every python script requires python 3 with the following packages (that can be i
 
 You may need to make some small changes to the bash scripts if they don't use the correct python version by changing the python command used in the scripts.
 
-# Downloading the dataset #
+# Downloading the SPP datasets #
 
-The SPP datasets need to be fetched from the spp.montana.edu website.
+The SPP datasets need to be fetched from the <http://spp.montana.edu/> website.
 The 8 datasets are under the menus:
 * Search... -> Lexical Decision Data... -> By item
 * Search... -> Naming Data... -> By item
 
 In both of these menus, download the datasets by going to the tabs "Assoc Related (1661)", "Assoc Unrel (1661)", "Other Assoc Related (1661)" and "Other Assoc Unrel (1661)".
 
-Place the downloaded files into the "data/raw/ldt" folder for the lexical decision datasets and "data/raw/nt" for the the naming datasets. This will allow you to use the script ".sh" that will create all the folds and splits for you.
+Place the downloaded files into the 'data/raw/ldt' folder for the lexical decision datasets and 'data/raw/nt' for the the naming datasets.
+
+# Building the dataset #
+
+Once the raw datasets have been downloaded, you can use the 'build_dataset.sh' script.
+It will automatically extract all the needed information from the raw datasets and it will also build the two splits.
+The first one is a dev-test split. The second one is a train-dev-test split.
+You can find the folds used to make these splits in 'data/folds'.
 
 # Scripts #
 
