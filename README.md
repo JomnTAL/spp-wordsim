@@ -1,4 +1,4 @@
-Software accompanying the RepEval 2017 EMNLP Workshop paper: 
+Software accompanying this paper from the RepEval 2017 EMNLP Workshop 
 
 # Requirements #
 
@@ -19,6 +19,8 @@ The 8 datasets are under the menus:
 In both of these menus, download the datasets by going to the tabs "Assoc Related (1661)", "Assoc Unrel (1661)", "Other Assoc Related (1661)" and "Other Assoc Unrel (1661)".
 
 Place the downloaded files into the 'data/raw/ldt' folder for the lexical decision datasets and 'data/raw/nt' for the the naming datasets.
+
+Full description of the datasets can be found in [this paper](http://www.montana.edu/khutchison/documents/spp.pdf).
 
 # Building the dataset #
 
