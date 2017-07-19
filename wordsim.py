@@ -94,7 +94,7 @@ def evaluate(dataset, header, word2vec):
             notfound += 1
 
     rho, pr = spearman_rho(label, pred)
-    tau, pt = pearson(label, pred)
+    tau, pt = kendall_tau(label, pred)
 
     result = (rho, pr, tau, pt, found, notfound)
 
@@ -102,7 +102,7 @@ def evaluate(dataset, header, word2vec):
 
 
 def print_results(results):
-    table = PrettyTable(["Embeddings", "rho", "rho p-value", "r", "r p-value", "Found", "Not Found"])
+    table = PrettyTable(["Embeddings", "rho", "rho p-value", "tau", "tau p-value", "Found", "Not Found"])
     table.align["Embeddings"] = "l"
 
     for key, value in results.items():
@@ -115,7 +115,7 @@ def dump_results(output, results):
         writer = csv.writer(csv_out, lineterminator="\n")
 
         rows = []
-        rows.append(["Embeddings", "rho", "rho p-value", "r", "r p-value", "Found", "Not Found"])
+        rows.append(["Embeddings", "rho", "rho p-value", "tau", "tau p-value", "Found", "Not Found"])
         for key, value in results.items():
             rows.append([key, value[0], value[1], value[2], value[3], value[4], value[5]])
 

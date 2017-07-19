@@ -29,7 +29,13 @@ It will automatically extract all the needed information from the raw datasets a
 The first one is a dev-test split. The second one is a train-dev-test split.
 You can find the folds used to make these splits in 'data/folds'.
 
-# Scripts #
+# Word embeddings evaluation #
+
+To evaluate word embedding models by using the previous datasets, we provide the 'wordsim.py' script.
+It needs a dataset (LDT/NT 200/1200ms) and one or more word embedding models.
+You can also provide a wordset to use as a filter. Only words that are in this wordset will be used from the word embedding models. This is useful to use the same pairs of words when evaluating multiple models.
+
+# Included scripts #
 
 Here are the different scripts that are used in the paper:
 * wordsim.py (spearman's correlations shown in the first experiment)
