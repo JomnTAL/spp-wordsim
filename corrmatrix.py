@@ -8,7 +8,7 @@ import argparse
 import csv
 import numpy as np
 from scipy import stats, linalg
-from pytools.loaders.embeddings import WordEmbeddings
+from extramodules.embeddings import WordEmbeddings
 
 
 def argparser():

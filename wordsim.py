@@ -7,7 +7,7 @@ import argparse
 from scipy import linalg, stats
 import csv
 from prettytable import PrettyTable
-from pytools.loaders.embeddings import WordEmbeddings
+from extramodules.embeddings import WordEmbeddings
 
 
 def argparser():

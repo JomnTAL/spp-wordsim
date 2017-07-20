@@ -1,10 +1,9 @@
 #!/usr/bin/env python
 # coding: utf8
 
-import sys
 import argparse
 import logging
-from pytools.loaders.embeddings import WordEmbeddings
+from extramodules.embeddings import WordEmbeddings
 
 
 def argparser():
